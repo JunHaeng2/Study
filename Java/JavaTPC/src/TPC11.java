@@ -18,7 +18,13 @@ zone 에 있는 메소드의 경우 heap Area에 주소가 pointer로 올라온�
 
 public class TPC11 {
     public static void main(String[] args) {
-        
+        int a = 56;
+        int b = 40;
+
+        TPC11 tpc = new TPC11(); // 객체 생성, heap area
+        int v = tpc.sum(a, b);
+
+        System.out.println(v);
     }
 
     public int sum(int a, int b) {
