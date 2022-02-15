@@ -30,5 +30,10 @@ public class TPC21 {
 
         System.out.println(my.hap());
 
+        // 3. 다른 회사에서 만들어 놓은 class들..
+        // API
+        // Gson -> json 데이터 포맷 만드는 API
+        
+
     }
 }
