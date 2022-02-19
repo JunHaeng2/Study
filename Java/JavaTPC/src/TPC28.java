@@ -14,9 +14,20 @@ public abstract class Animal() {
 }
 
 */
+import kr.poly.*;
 
 public class TPC28 {
     public static void main(String[] args) {
-        dd
+        Animal ani1 = new Dog();
+        ani1.eat(); // 동적바인딩
+        ani1.move();
+        // 추상클래스 에서 
+        // 부모가 하위 클래스의 동작방식을 모른다 하더라도
+        // 재정의만 되어있으면 그 하위클래스를 사용할수있는거
+        
+        Animal ani2 = new Cat();
+        ani2.eat();
+        ani2.move();
+        ((Cat)ani2).night(); // 다운캐스팅
     }
 }
