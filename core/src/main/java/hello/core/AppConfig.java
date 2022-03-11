@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class AppConfig {
-    //
+    ///
 
     //AppConfig를 이런식으로 명확화 할수있음. 역할을 드러나게.
 
