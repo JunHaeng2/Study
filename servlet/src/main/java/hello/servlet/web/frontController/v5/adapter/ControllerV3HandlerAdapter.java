@@ -13,21 +13,25 @@ import java.util.Map;
 
 public class ControllerV3HandlerAdapter implements MyHandlerAdapter {
     @Override
-    public boolean support(Object handler) {
+    public boolean supports(Object handler) {
         return (handler instanceof ControllerV3);
     }
 
     @Override
-    public ModelView handle(HttpServletResponse request, HttpServletResponse response, Object handlder) throws IOException, ServletException {
+    public ModelView handle(HttpServletRequest request, HttpServletResponse response, Object handlder) throws IOException, ServletException {
         ControllerV3 controller = (ControllerV3) handlder;
 
-        controller.process()
+        Map<String, String> paramMap = createParamMap(request);
+        ModelView mv = controller.process(paramMap);
+
+        return mv;
     }
 
     private Map<String, String> createParamMap(HttpServletRequest request) {
         Map<String, String> paramMap = new HashMap<>();
         request.getParameterNames().asIterator()
                 .forEachRemaining(paramName -> paramMap.put(paramName, request.getParameter(paramName)));
+        return paramMap;
     }
 
 
