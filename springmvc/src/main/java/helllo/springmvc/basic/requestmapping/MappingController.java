@@ -2,6 +2,7 @@ package helllo.springmvc.basic.requestmapping;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -100,6 +101,19 @@ public class MappingController {
     @PostMapping(value = "/mapping-consume", consumes = "application/json")
     public String mappingConsumes() {
         log.info("mappingConsumes");
+        return "ok";
+    }
+
+    /**
+     * Accept 헤더 기반 Media Type
+     * produces = "text/html"
+     * produces = "!text/html"
+     * produces = "text/*"
+     * produces = "*\/*"
+     */
+    @PostMapping(value = "/mapping-produce", produces = MediaType.TEXT_HTML_VALUE)
+    public String mappingProduces() {
+        log.info("mappingProduces");
         return "ok";
     }
 }
