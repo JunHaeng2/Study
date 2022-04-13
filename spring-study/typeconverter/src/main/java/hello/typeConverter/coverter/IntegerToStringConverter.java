@@ -1,4 +1,4 @@
-package hello.typeConverter.coverter;
+package hello.typeconverter.coverter;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.convert.converter.Converter;

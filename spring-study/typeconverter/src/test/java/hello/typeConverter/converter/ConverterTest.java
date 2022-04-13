@@ -1,10 +1,10 @@
-package hello.typeConverter.converter;
+package hello.typeconverter.converter;
 
-import hello.typeConverter.coverter.IntegerToStringConverter;
-import hello.typeConverter.coverter.IpPortToStringConverter;
-import hello.typeConverter.coverter.StringToIntegerConverter;
-import hello.typeConverter.coverter.StringToIpPortConverter;
-import hello.typeConverter.type.IpPort;
+import hello.typeconverter.coverter.IntegerToStringConverter;
+import hello.typeconverter.coverter.IpPortToStringConverter;
+import hello.typeconverter.coverter.StringToIntegerConverter;
+import hello.typeconverter.coverter.StringToIpPortConverter;
+import hello.typeconverter.type.IpPort;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
