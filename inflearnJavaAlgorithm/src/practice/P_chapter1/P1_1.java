@@ -1,3 +1,4 @@
+package practice.P_chapter1;
 
 import java.util.Scanner;
 
