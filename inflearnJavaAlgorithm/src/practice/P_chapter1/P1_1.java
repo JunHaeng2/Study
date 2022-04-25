@@ -14,6 +14,8 @@ public class P1_1 {
                 cnt += 1;
             }
 
+            //
+
         }
         return cnt;
     }
