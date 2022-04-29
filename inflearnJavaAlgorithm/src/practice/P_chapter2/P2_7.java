@@ -1,41 +1,47 @@
 package practice.P_chapter2;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class P2_7 {
 
-    public static int solution(String[] str) {
-        int answer = 0;
-        ArrayList<Integer> arr = new ArrayList<>();
+    // 못풀음
 
-        for (String s : str) {
-            arr.add(Integer.parseInt(s));
-        }
+    public static int solution(int[] str) {
 
         int k = 0;
-        if (arr.get(0) == 1) {
-            answer += 1;
+
+        int[] arr = new int[str.length];
+
+        if (str[0] == 1) {
+            arr[0] = 1;
+        } else {
+            arr[0] = 0;
         }
 
         for (int i = 1; i < str.length; i++) {
-            if (arr.get(i) == 1) {
-                k += 1;
+            if (str[i] == 0) {
+                arr[i] = 0;
             } else {
-                answer += k;
-                k = 0;
+                if (arr[i - 1] == 1) {
+                    arr[i] = arr[i - 1] + 1;
+                }
+                arr[i] = 1;
             }
         }
 
-        return answer;
+        return Arrays.stream(arr).sum();
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        String[] arr = new String[n];
+        int[] arr = new int[n];
 
-        arr = sc.next().split(" ");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
 
         System.out.println(solution(arr));
     }
