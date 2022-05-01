@@ -6,20 +6,19 @@ public class P6_1 {
 
     public static int[] solution(int n, int[] arr) {
 
-        int minValue = 100;
-        int minIndex = 0;
+        // 첫번째 숫자를 생각하지 않았음.. 첫번쨰
+        // 숫자가 최솟값이라면 바꿀 필요가없는건데?
 
         for (int i = 0; i < n; i++) {
+            int minIndex = i;
             for (int j = i + 1; j < n; j++) {
-                if (arr[j] < minValue) {
-                    minValue = arr[j];
+                if (arr[minIndex] > arr[j]) {
                     minIndex = j;
                 }
             }
-
-            int tmp = arr[i];
-            arr[i] = minValue;
-            arr[minIndex] = tmp;
+            int tmp = arr[minIndex];
+            arr[minIndex] = arr[i];
+            arr[i] = tmp;
         }
 
         return arr;
