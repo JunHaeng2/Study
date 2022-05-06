@@ -2,18 +2,18 @@ package practice.P_chapter8;
 
 import java.util.Scanner;
 
-public class P8_4 {
-    static int[] pm;
+public class P8_9 {
+    static int[] combi;
     static int n, m;
-    public static void DFS(int L) {
-        if (L==m) {
-            for (int x : pm) System.out.print(x + " ");
+    public static void DFS(int L, int s) {
+        if (L == m) {
+            for (int x : combi) System.out.print(x + " ");
             System.out.println();
         }
         else {
-            for (int i=1; i<=n; i++) {
-                pm[L] = i;
-                DFS(L+1);
+            for (int i=s; i<=n; i++) {
+                combi[L] = i;
+                DFS(L+1, i+1);
             }
         }
     }
@@ -22,7 +22,7 @@ public class P8_4 {
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
         m = sc.nextInt();
-        pm = new int[m];
-        DFS(0);
+        combi = new int[m];
+        DFS(0, 1);
     }
 }
