@@ -28,7 +28,7 @@ public class B10828 {
             if (tmp1.equals("push")) {
                 int tmp2 = sc.nextInt();
                 push(tmp2);
-            } //
+            } ////
         }
     }
 }
