@@ -1,3 +1,5 @@
+package D0522;
+
 public class P121 {
     class Solution {
         public int maxProfit(int[] prices) {

@@ -1,3 +1,5 @@
+package D0522;
+
 import java.util.*;
 
 public class P252 {

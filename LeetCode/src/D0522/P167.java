@@ -1,3 +1,5 @@
+package D0522;
+
 public class P167 {
     class Solution {
         public int[] twoSum(int[] numbers, int target) {
