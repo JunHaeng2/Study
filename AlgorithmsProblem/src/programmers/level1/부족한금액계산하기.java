@@ -1,4 +1,4 @@
-package programmers;
+package programmers.level1;
 
 public class 부족한금액계산하기 {
     class Solution {
