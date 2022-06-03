@@ -3,17 +3,22 @@ package programmers.level2;
 import java.util.Stack;
 
 public class 짝지어제거하기 {
-    class Solution {
+    static class Solution {
         public int solution(String s) {
-            int answer = -1;
 
-            String[] st = s.split("");
-            Stack<String> stack = new Stack<>();
-            for (int i = 0; i < st.length; i++) {
-
+            Stack<Character> st = new Stack<>();
+            for (int i = 0; i < s.length(); i++) {
+                if (st.size() != 0 && st.peek() == s.charAt(i)) st.pop();
+                else st.add(s.charAt(i));
             }
 
-            return answer;
+            if (st.size() == 0) return 1;
+            return 0;
+        }
+
+        public static void main(String[] args) {
+            Solution s = new Solution();
+
         }
     }
 }
