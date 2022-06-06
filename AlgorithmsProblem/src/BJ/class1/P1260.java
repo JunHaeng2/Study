@@ -1,4 +1,4 @@
-package BJ;
+package BJ.class1;
 
 import java.util.Scanner;
 
